@@ -17,6 +17,8 @@ for (let i = 0; i < 6; i++) {
 
 function ListModal(props) {
 
+    console.log('Rendering');
+
     return (
         <Modal
             title="Hotels"
@@ -50,4 +52,6 @@ function ListModal(props) {
     );
 }
 
-export default ListModal;
+export default React.memo(ListModal, (prevProps, nextProps) => {
+    return nextProps.visible === prevProps.visible
+});

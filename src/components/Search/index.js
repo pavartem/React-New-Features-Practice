@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {Form, Input, Button, DatePicker} from 'antd';
+import React, {useState, useEffect} from 'react';
+import {Form, Input, Button, DatePicker, message} from 'antd';
 import {SearchOutlined} from '@ant-design/icons';
 import moment from 'moment';
 import './Search.css';
@@ -13,6 +13,20 @@ const dateFormat = 'YYYY/MM/DD';
 function Search(props) {
 
     const [visible, setVisible] = useState(false);
+
+    const [test, setTest] = useState(false);
+
+    useEffect(() => {
+        message.error('UseEffect executed on every render like ComponentDidUpdate !!!');
+    });
+
+    useEffect(() => {
+        message.warning('UseEffect executed just one time like componentDidMount !!!');
+    }, []);
+
+    useEffect(() => {
+        message.success('UseEffect executed for the first render and when visible is changed in the state !!!');
+    }, [visible]);
 
     const toggleModal = () => {
         setVisible(!visible);
@@ -29,6 +43,7 @@ function Search(props) {
                     format={dateFormat}
                     style={{width: 550, marginRight: 20}}
                     className='search-range'
+                    onChange={() => setTest(!test)}
                 />
                 <Button
                     icon={<SearchOutlined/>}
