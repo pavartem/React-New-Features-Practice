@@ -1,0 +1,7 @@
+const SEARCH = {
+    SEARCH: 'SEARCH',
+    SEARCH_SUCCESS: 'SEARCH_SUCCESS',
+    SEARCH_ERROR: 'SEARCH_ERROR',
+};
+
+export {SEARCH};

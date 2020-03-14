@@ -1,0 +1,25 @@
+.search-wrapper {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+}
+
+.search-btn {
+    display: flex;
+    align-items: center;
+}
+
+.search-range {
+    display: flex;
+    align-items: center;
+}
