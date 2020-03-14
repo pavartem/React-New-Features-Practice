@@ -27,4 +27,10 @@ useEffect замінює lifecycle методи.
     
     // true - щоб не ререндерити, false - ререндер
 
+######  Custom Hooks
+Custom Hook - це просто функція, яка повертає масив з двох елементів [isLoading, fetchedData] (наприклад два об'єкта)
+
+Ще є useReducer, useContext
+
+
 
